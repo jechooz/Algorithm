@@ -1,5 +1,5 @@
 def solution(n):
-    
+
     #Str(), resverse() map() int() 활용
     
     #1.정수를 스트링변경 리스트묶음
