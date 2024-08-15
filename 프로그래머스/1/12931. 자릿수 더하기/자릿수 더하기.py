@@ -1,7 +1,7 @@
 def solution(number):
 
-    arr= list(str(number))
-    answer = sum(int(i) for i in arr)
+    #문자열화->리스트화
+    arr=list(str(number))
     
-    return answer
+    return sum(int(i) for i in arr)
     
