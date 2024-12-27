@@ -1,5 +1,4 @@
 import sys
-from itertools import permutations
 
 input = sys.stdin.readline
 
@@ -8,5 +7,19 @@ arr = list(map(int, input().split()))
 
 arr.sort()
 
-for p in permutations(arr, m):
-    print(*p)
+result = []
+visited = [False] * n
+
+def dfs(depth):
+    if depth == m:
+        print(*result)
+        return
+    for i in range(n):
+        if visited[i]: continue
+        visited[i] = True
+        result.append(arr[i])
+        dfs(depth + 1)
+        result.pop()
+        visited[i] = False
+
+dfs(0)
